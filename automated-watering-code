@@ -1,0 +1,24 @@
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin (9600);
+pinMode (2,OUTPUT);
+}
+
+void loop() {
+    // put your main code here, to run repeatedly:
+if (analogRead(A0)>550){
+analogWrite (2,350) ;
+Serial.println ("Mositure Level");
+Serial.println (analogRead(A0));
+delay(1000); //Pump Time: 1000 = 1 Second
+analogWrite(2,0);
+
+}
+else{
+  analogWrite(2,0);
+  Serial.println ("Mositure Level");
+  Serial.println (analogRead(A0));
+  delay(5000); //Wait to check again
+}
+
+}
