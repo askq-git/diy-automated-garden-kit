@@ -1,11 +1,11 @@
 void setup() {
   // put your setup code here, to run once:
-Serial.begin (9600);
+Serial.begin (9600); //Starts the serial motnior
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-Serial.println ("Mositure Level");
-Serial.println (analogRead(A0));
+Serial.println ("Mositure Level"); //Prints text to the serial monitor
+Serial.println (analogRead(A0)); //Captures the value from the mositure sensor and prints to the serial monitor. Higher value = dry, lower value = moist
 delay(2000);
 }
