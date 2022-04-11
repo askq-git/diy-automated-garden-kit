@@ -1,7 +1,7 @@
 void setup() {
   // put your setup code here, to run once:
 Serial.begin (9600);
-pinMode (2,OUTPUT);
+pinMode (2,OUTPUT); //Sets GPIO PIN 2(D4) to an output
 }
 
 void loop() {
