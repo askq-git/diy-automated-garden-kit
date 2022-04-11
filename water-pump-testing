@@ -1,0 +1,13 @@
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin (9600); //Starts the serial motnior
+pinMode (2,OUTPUT); //Sets D4 or GPIO PIN 2 to output mode
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+analogWrite (2,350); //Turns on the pump and sets power value to 350. Set a higher value for more power
+delay(2000); //Wait of 2 seconds. 1000 = 1 Seconds
+analogWrite (2,0); //Turns the pump off. O here sets the power to off
+delay(2000); //Wait of 2 seconds before the pump turns on again. 1000 = 1 Seconds
+}
